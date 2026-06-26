@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #13132b;
+  --color-foreground: #e7e9f5;
+  --color-muted: #8a8fb5;
+  --color-accent-blue: #4f7cff;
+}
+
+:root {
+  --background: #13132b;
+  --background-overlay: #0e0e22;
+  --background-elevated: #1a1a38;
+  --panel: #1b1c3a;
+  --card: #23244d;
+  --card-hover: #2c2e5e;
+  --border: #33356b;
+  --foreground: #e7e9f5;
+  --muted: #8a8fb5;
+  --text-secondary: #8a8fb5;
+  --text-tertiary: color-mix(in srgb, var(--muted) 70%, transparent);
+  --accent: #4f7cff;
+  --accent-foreground: #ffffff;
+  --accent-blue: #4f7cff;
+  --on-event: #ffffff;
+  --cat-blue: #4f7cff;
+  --cat-emerald: #2fbf71;
+  --cat-coral: #ff5d6c;
+  --cat-violet: #8b6cff;
+  --cat-amber: #f4a93c;
+  --chrome-cta-gradient: linear-gradient(128deg, #3d6ef5 0%, #7a5cff 48%, #2eb8d4 100%);
+  --chrome-cta-border: #355fd9;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cal-day-name {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.cal-day-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@keyframes ambient-drift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.ambient-gradient {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 6%, transparent) 0%,
+    transparent 40%,
+    color-mix(in srgb, var(--accent) 4%, transparent) 70%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  animation: ambient-drift 30s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-gradient {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-accordion-down,
+  .animate-accordion-up {
+    animation: none;
+  }
+}
+
+.markdown-body h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+.markdown-body h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.markdown-body p,
+.markdown-body li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+.markdown-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+.markdown-body a {
+  color: var(--accent);
+}
