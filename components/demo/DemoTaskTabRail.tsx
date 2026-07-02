@@ -119,7 +119,7 @@ interface DemoTaskSidebarProps {
 export function DemoTaskSidebar({ open, activeColor = 'var(--cat-blue)', tasks }: DemoTaskSidebarProps) {
   return (
     <motion.aside
-      className="absolute top-0 z-20 hidden overflow-hidden border-l border-[var(--border)] bg-[var(--panel)] md:block"
+      className="absolute top-0 z-20 overflow-hidden border-l border-[var(--border)] bg-[var(--panel)] will-change-transform"
       style={{ bottom: 0, right: 0, width: DEMO_TASK_PANEL_W }}
       initial={false}
       animate={{ x: open ? 0 : '100%' }}
