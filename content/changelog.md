@@ -6,7 +6,8 @@
 - Task tabs with color-coded categories and slide-out panel
 - Task scheduling with spring cascade reflow
 - Goal tracking with water-fill progress visualization
-- Widget dock (timer offline; weather, email, social when connected)
-- Local-first storage on your device
-- Windows desktop installer via Tauri
-- Web app
+- Widget dock (timer works offline)
+- Local-first storage — no account required for v0.1
+- JSON backup and .ics export
+- Windows desktop installer (Chronocal)
+- Web app at app.chrono.app

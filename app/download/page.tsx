@@ -11,9 +11,11 @@ import {
 } from '@/content/downloads.manifest';
 import { detectPlatformFromUserAgent, PLATFORM_LABELS, type PlatformId } from '@/lib/osDetect';
 
+import { PRODUCT_NAME } from '@/lib/brand';
+
 export const metadata: Metadata = {
-  title: 'Download — Smart Calendar',
-  description: 'Download Smart Calendar for Windows or use the web app. More platforms coming soon.',
+  title: `Download — ${PRODUCT_NAME}`,
+  description: `Download ${PRODUCT_NAME} for Windows or use the web app. More platforms coming soon.`,
 };
 
 function PlatformCard({
@@ -34,14 +36,21 @@ function PlatformCard({
       }`}
     >
       <h3 className="text-lg font-semibold">{platform.label}</h3>
+      {platform.tagline && (
+        <p className="mt-2 text-sm text-[var(--text-secondary)]">{platform.tagline}</p>
+      )}
       {platform.requirements && (
-        <p className="mt-1 text-sm text-[var(--text-secondary)]">{platform.requirements}</p>
+        <p className="mt-1 text-xs text-[var(--text-tertiary)]">{platform.requirements}</p>
       )}
       {available ? (
         <>
           <Button className="mt-4" asChild>
-            <a href={platform.url} target="_blank" rel="noopener noreferrer">
-              Download for {platform.label}
+            <a
+              href={platform.url}
+              download={platform.fileName}
+              rel="noopener noreferrer"
+            >
+              {platform.id === 'web' ? `Open ${platform.label}` : `Download for ${platform.label}`}
             </a>
           </Button>
           {platform.fileSize && (

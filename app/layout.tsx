@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import { SmoothScrollProvider } from '@/components/layout/SmoothScrollProvider';
+import {
+  PRODUCT_DESCRIPTION,
+  PRODUCT_NAME,
+  PRODUCT_SUBTAGLINE,
+  PRODUCT_TAGLINE,
+  SITE_URL_DEFAULT,
+} from '@/lib/brand';
 import './globals.css';
 
 const inter = Inter({
@@ -15,23 +22,26 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://smartcalendar.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
 export const metadata: Metadata = {
-  title: 'Smart Calendar — A calmer way to plan your week',
-  description:
-    'A weekly calendar for focused work. Schedules your tasks, protects your time, and gets out of your way. Windows and web available today.',
+  title: `${PRODUCT_NAME} — ${PRODUCT_TAGLINE}`,
+  description: PRODUCT_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  icons: {
+    icon: [{ url: '/brand/logo.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/brand/logo.svg', type: 'image/svg+xml' }],
+  },
   openGraph: {
-    title: 'Smart Calendar',
-    description: 'A calmer way to plan your week.',
+    title: PRODUCT_NAME,
+    description: PRODUCT_SUBTAGLINE,
     images: ['/og-image.svg'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Smart Calendar',
-    description: 'A calmer way to plan your week.',
+    title: PRODUCT_NAME,
+    description: PRODUCT_SUBTAGLINE,
     images: ['/og-image.svg'],
   },
 };
@@ -39,7 +49,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
-  name: 'Smart Calendar',
+  name: PRODUCT_NAME,
   operatingSystem: 'Windows, Web',
   applicationCategory: 'ProductivityApplication',
   offers: {

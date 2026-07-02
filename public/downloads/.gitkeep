@@ -1,0 +1,1 @@
+# Installer binaries are built locally and uploaded with `vercel deploy` (gitignored).

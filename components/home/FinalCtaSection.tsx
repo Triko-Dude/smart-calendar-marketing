@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { PRODUCT_NAME } from '@/lib/brand';
 import { PLATFORM_STRIP } from '@/lib/platformCopy';
 
 export function FinalCtaSection() {
@@ -11,7 +12,7 @@ export function FinalCtaSection() {
         </h2>
         <div className="mt-10">
           <Button size="lg" asChild>
-            <Link href="/download">Download Smart Calendar</Link>
+            <Link href="/download">Download {PRODUCT_NAME}</Link>
           </Button>
         </div>
         <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">

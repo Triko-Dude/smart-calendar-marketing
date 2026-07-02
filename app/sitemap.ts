@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { SITE_URL_DEFAULT } from '@/lib/brand';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://smartcalendar.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ['', '/download', '/changelog', '/privacy', '/terms'];

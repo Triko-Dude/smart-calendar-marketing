@@ -36,6 +36,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Desktop installers (deploy via Vercel CLI upload, not git)
+/public/downloads/*.exe
+/public/downloads/*.msi
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

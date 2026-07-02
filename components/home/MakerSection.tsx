@@ -1,3 +1,5 @@
+import { MAKER_NAME } from '@/lib/brand';
+
 export function MakerSection() {
   return (
     <section className="border-y border-[var(--border)] bg-[var(--background-overlay)] py-32">
@@ -7,7 +9,7 @@ export function MakerSection() {
         </h2>
         <blockquote className="mt-8 space-y-6 text-pretty text-lg leading-relaxed text-[var(--text-secondary)]">
           <p>
-            I built Smart Calendar because every calendar I tried treated my time as boxes to fill.
+            I built Chrono because every calendar I tried treated my time as boxes to fill.
             None of them respected the actual work — the act of sitting down, getting into something
             hard, and finishing it.
           </p>
@@ -16,7 +18,7 @@ export function MakerSection() {
             grateful.
           </p>
         </blockquote>
-        <p className="mt-8 text-sm text-[var(--text-tertiary)]">— The maker</p>
+        <p className="mt-8 text-sm text-[var(--text-tertiary)]">— {MAKER_NAME}</p>
       </div>
     </section>
   );

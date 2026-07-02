@@ -1,19 +1,22 @@
 'use client';
 
-import { type ReactNode } from 'react';
+import { type ReactNode, type RefObject } from 'react';
 import { AppChromeFrame } from '@/components/demo/AppChromeFrame';
 import { CalendarGridShell } from '@/components/demo/CalendarGridShell';
 import { DemoCalendarHeader } from '@/components/demo/DemoCalendarHeader';
 import { cn } from '@/lib/cn';
+import type { DemoMorphPhase, DemoWidgetId } from '@/lib/demoWidgetRegistry';
 
 interface ProductDemoFrameProps {
   children?: ReactNode;
   className?: string;
   panelOpen?: boolean;
-  activeWidgetId?: string;
+  activeWidgetId?: DemoWidgetId;
+  morphPhase?: DemoMorphPhase;
+  widgetLayerRef?: RefObject<HTMLDivElement | null>;
+  widgetOverlay?: ReactNode;
   sidebar?: ReactNode;
   tabRail?: ReactNode;
-  overlay?: ReactNode;
   height?: number;
   todayIndex?: number;
   monthTitle?: string;
@@ -24,9 +27,11 @@ export function ProductDemoFrame({
   className,
   panelOpen,
   activeWidgetId,
+  morphPhase,
+  widgetLayerRef,
+  widgetOverlay,
   sidebar,
   tabRail,
-  overlay,
   height = 440,
   todayIndex = 1,
   monthTitle,
@@ -36,13 +41,15 @@ export function ProductDemoFrame({
       className={cn(className)}
       panelOpen={panelOpen}
       activeWidgetId={activeWidgetId}
+      morphPhase={morphPhase}
+      widgetLayerRef={widgetLayerRef}
+      widgetOverlay={widgetOverlay}
       height={height}
       header={<DemoCalendarHeader title={monthTitle} />}
       sidebar={sidebar}
       tabRail={tabRail}
     >
       <CalendarGridShell todayIndex={todayIndex}>{children}</CalendarGridShell>
-      {overlay}
     </AppChromeFrame>
   );
 }

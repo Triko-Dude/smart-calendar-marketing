@@ -2,15 +2,15 @@
 
 import { CalendarDays, Home, BarChart3, Settings } from 'lucide-react';
 import { cn } from '@/lib/cn';
+import { BrandLogo } from '@/components/brand/BrandLogo';
+import { PRODUCT_NAME } from '@/lib/brand';
 
 export function DemoTopNav() {
   return (
     <header className="flex h-12 shrink-0 items-center justify-between border-b border-[var(--border)] bg-[var(--panel)] px-4">
       <div className="flex items-center gap-2">
-        <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--accent)] to-[color-mix(in_srgb,var(--accent)_62%,var(--foreground))] text-[var(--accent-foreground)] shadow-lg">
-          <CalendarDays className="h-3.5 w-3.5" aria-hidden />
-        </div>
-        <span className="text-sm font-semibold tracking-tight">Smart Calendar</span>
+        <BrandLogo size={28} />
+        <span className="text-sm font-semibold tracking-tight">{PRODUCT_NAME}</span>
       </div>
       <nav className="flex items-center gap-0.5 rounded-full bg-[var(--card)] p-0.5">
         {[

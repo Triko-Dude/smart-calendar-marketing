@@ -10,7 +10,7 @@ const CARDS = [
   },
   {
     title: 'Not a team collaboration suite.',
-    body: 'Smart Calendar is for one person planning one week. No shared workspaces, no @-mentions, no permissions matrix.',
+    body: 'Chrono is for one person planning one week. No shared workspaces, no @-mentions, no permissions matrix.',
   },
   {
     title: 'Not a CRM, journal, or note-taking app.',

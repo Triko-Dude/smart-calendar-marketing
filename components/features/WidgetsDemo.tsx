@@ -1,29 +1,27 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
+import { DemoFloatingWidgetCard } from '@/components/demo/DemoFloatingWidgetCard';
 import { ProductDemoFrame } from '@/components/demo/ProductDemoFrame';
-import { DemoWidgetPanel, DEMO_WIDGETS } from '@/components/demo/DemoWidgetPanel';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { useWidgetDemoCycle } from '@/hooks/useWidgetDemoCycle';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
 
 export function WidgetsDemo() {
   const reduced = useReducedMotion();
   const containerRef = useRef<HTMLDivElement>(null);
+  const widgetLayerRef = useRef<HTMLDivElement>(null);
   const isVisible = useInViewPause(containerRef);
-  const [activeId, setActiveId] = useState<string | undefined>(
-    reduced ? DEMO_WIDGETS[1].id : undefined
-  );
 
-  useEffect(() => {
-    if (reduced || !isVisible) return;
-    let i = 0;
-    const interval = setInterval(() => {
-      setActiveId(DEMO_WIDGETS[i % DEMO_WIDGETS.length].id);
-      i++;
-    }, 2400);
-    return () => clearInterval(interval);
-  }, [reduced, isVisible]);
+  const { activeId, morphPhase, originRect, floatPosition, handleMorphComplete } =
+    useWidgetDemoCycle(isVisible, reduced, widgetLayerRef);
+
+  const showCard =
+    activeId !== undefined &&
+    morphPhase !== 'closed' &&
+    originRect !== null &&
+    floatPosition !== null;
 
   return (
     <FeaturePanel
@@ -34,7 +32,22 @@ export function WidgetsDemo() {
       subheadline="A timer that works offline. Weather, email, and social when you connect an account — docked at the edge, expandable when wanted, invisible when not."
     >
       <div ref={containerRef} className="relative">
-        <ProductDemoFrame activeWidgetId={activeId} overlay={<DemoWidgetPanel activeId={activeId} />} />
+        <ProductDemoFrame
+          activeWidgetId={activeId}
+          morphPhase={morphPhase}
+          widgetLayerRef={widgetLayerRef}
+          widgetOverlay={
+            showCard ? (
+              <DemoFloatingWidgetCard
+                widgetId={activeId}
+                morphPhase={morphPhase}
+                originRect={originRect}
+                floatPosition={floatPosition}
+                onMorphComplete={handleMorphComplete}
+              />
+            ) : null
+          }
+        />
         <p className="mt-4 text-center text-xs text-[var(--text-tertiary)]">
           Connected widgets require signing in.
         </p>

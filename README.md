@@ -1,6 +1,6 @@
-# Smart Calendar — Marketing Site
+# Chrono — Marketing Site
 
-Marketing and download website for [Smart Calendar](https://github.com/smart-calendar/smart-calendar). Separate from the main app repo.
+Marketing and download website for [Chrono](https://github.com/smart-calendar/smart-calendar). Separate from the main app repo.
 
 ## Develop
 
@@ -10,14 +10,14 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3002](http://localhost:3002) (or port 3000 if not specified).
 
 ## Environment
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap/OG |
-| `NEXT_PUBLIC_APP_URL` | Web app link on download page |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap/OG (default `https://chrono.app`) |
+| `NEXT_PUBLIC_APP_URL` | Web app link on download page (default `https://app.chrono.app`) |
 | `NEXT_PUBLIC_GITHUB_RELEASES_URL` | Windows desktop release URL |
 
 ## Download manifest
@@ -34,5 +34,6 @@ Push to `main` on Vercel for automatic redeploys (~30s).
 - `components/demo/` — product visualizations mirroring app motion
 - `components/features/` — six scroll-driven feature panels
 - `content/` — markdown + download manifest
+- `lib/brand.ts` — product name, taglines, and contact constants
 
 See `MARKETING_WEBSITE_PROMPT.md` for the full product brief.

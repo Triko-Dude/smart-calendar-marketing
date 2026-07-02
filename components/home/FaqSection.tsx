@@ -4,11 +4,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { CONTACT_EMAIL, PRODUCT_NAME } from '@/lib/brand';
 
 const FAQ_ITEMS = [
   {
     q: 'Is my data private?',
     a: 'Yes. By default, your planner data lives on your device. We do not sell, share, or analyze your calendar. If you connect Google Calendar, only the events you authorize are imported. Read the privacy policy for specifics.',
+  },
+  {
+    q: 'Windows says the installer is unrecognized — is it safe?',
+    a: 'v0.1 installers are not code-signed yet, so SmartScreen may warn on first install. Click "More info" then "Run anyway" if you trust this download from chrono.app. Code signing is planned for a future release.',
   },
   {
     q: 'Does it work offline?',
@@ -20,7 +25,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Can I import from Google Calendar?',
-    a: 'Yes, when you connect a Google account. Existing events appear as read-only overlays on your week. Writing back to Google is not supported yet — your scheduled tasks stay in Smart Calendar.',
+    a: `Yes, when you connect a Google account. Existing events appear as read-only overlays on your week. Writing back to Google is not supported yet — your scheduled tasks stay in ${PRODUCT_NAME}.`,
   },
   {
     q: 'What about Apple Calendar?',
@@ -32,11 +37,11 @@ const FAQ_ITEMS = [
   },
   {
     q: 'What if I find a bug?',
-    a: 'Email hello@smartcalendar.app or open an issue on the public roadmap. Fixes ship as we can.',
+    a: `Email ${CONTACT_EMAIL} or open an issue on the public roadmap. Fixes ship as we can.`,
   },
   {
     q: 'Can I use it for teams?',
-    a: 'Not yet. Smart Calendar is built for one person\'s week. Team features are not on the near roadmap.',
+    a: `Not yet. ${PRODUCT_NAME} is built for one person's week. Team features are not on the near roadmap.`,
   },
   {
     q: 'What if I don\'t like it?',

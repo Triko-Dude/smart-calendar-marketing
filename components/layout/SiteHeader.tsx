@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CalendarDays } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { BrandLogo } from '@/components/brand/BrandLogo';
+import { PRODUCT_NAME } from '@/lib/brand';
 import { useLenisScroll } from '@/components/layout/SmoothScrollProvider';
 
 export function SiteHeader() {
@@ -36,13 +37,8 @@ export function SiteHeader() {
           href="/"
           className="flex items-center gap-2.5 text-base font-semibold tracking-tight text-[var(--foreground)]"
         >
-          <span
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--accent)] to-[color-mix(in_srgb,var(--accent)_62%,var(--foreground))] text-[var(--accent-foreground)] shadow-md"
-            aria-hidden
-          >
-            <CalendarDays className="h-4 w-4" />
-          </span>
-          Smart Calendar
+          <BrandLogo size={32} />
+          {PRODUCT_NAME}
         </Link>
         <Button variant="outline" size="sm" asChild>
           <Link href="/download">Download</Link>

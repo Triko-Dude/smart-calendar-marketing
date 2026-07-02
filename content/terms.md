@@ -2,11 +2,11 @@
 
 **Last updated:** June 2026
 
-By using Smart Calendar, you agree to these terms.
+By using Chrono, you agree to these terms.
 
 ## License
 
-Smart Calendar grants you a personal, non-exclusive license to use the software on devices you own or control.
+Chrono grants you a personal, non-exclusive license to use the software on devices you own or control.
 
 ## Your data
 
@@ -18,8 +18,8 @@ Pro subscriptions include a 7-day free trial with no credit card required. You d
 
 ## Disclaimer
 
-Smart Calendar is provided "as is" without warranty. We are not liable for data loss — please use the built-in backup feature.
+Chrono is provided "as is" without warranty. We are not liable for data loss — please use the built-in backup feature.
 
 ## Contact
 
-hello@smartcalendar.app
+hello@chrono.app

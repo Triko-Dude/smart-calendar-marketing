@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { PRODUCT_HERO_BODY, PRODUCT_TAGLINE } from '@/lib/brand';
 import { PLATFORM_STRIP } from '@/lib/platformCopy';
 
 const HeroProductLoop = dynamic(
@@ -23,7 +24,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              A calmer way to plan your week.
+              {PRODUCT_TAGLINE}
             </motion.h1>
             <motion.p
               className="mt-6 max-w-md text-pretty text-lg text-[var(--text-secondary)] md:text-xl"
@@ -31,8 +32,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Smart Calendar is a weekly calendar for focused work. It schedules your tasks,
-              protects your time, and gets out of your way.
+              {PRODUCT_HERO_BODY}
             </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap gap-3"

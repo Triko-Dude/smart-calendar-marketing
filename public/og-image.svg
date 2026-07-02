@@ -1,12 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#13132B"/>
-  <rect x="80" y="120" width="1040" height="390" rx="16" fill="#1A1A38" stroke="rgba(255,255,255,0.08)"/>
-  <text x="100" y="90" fill="rgba(255,255,255,0.95)" font-family="system-ui,sans-serif" font-size="36" font-weight="600">Smart Calendar</text>
-  <text x="100" y="560" fill="rgba(255,255,255,0.6)" font-family="system-ui,sans-serif" font-size="24">A calmer way to plan your week.</text>
-  <rect x="200" y="200" width="180" height="80" rx="8" fill="#4f7cff" opacity="0.9"/>
-  <rect x="200" y="300" width="180" height="60" rx="8" fill="#2fbf71" opacity="0.9"/>
-  <rect x="200" y="380" width="180" height="70" rx="8" fill="#ff5d6c" opacity="0.9"/>
-  <text x="220" y="245" fill="white" font-family="system-ui,sans-serif" font-size="16">Deep work</text>
-  <text x="220" y="335" fill="white" font-family="system-ui,sans-serif" font-size="16">Gym</text>
-  <text x="220" y="420" fill="white" font-family="system-ui,sans-serif" font-size="16">Write</text>
+  <rect width="1200" height="630" fill="#0B0D12"/>
+  <defs>
+    <linearGradient id="luxuryFluid" gradientUnits="userSpaceOnUse" x1="75" y1="20" x2="35" y2="80">
+      <stop offset="0%" stop-color="#4B9AFF"/>
+      <stop offset="100%" stop-color="#BF5AF2"/>
+    </linearGradient>
+    <filter id="metaballPinch" x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </defs>
+  <g transform="translate(120, 165) scale(3)">
+    <g transform="translate(5, 0)">
+      <path d="M 65 30 A 28 28 0 1 0 70 70" fill="none" stroke="url(#luxuryFluid)" stroke-width="13" stroke-linecap="round"/>
+      <g filter="url(#metaballPinch)">
+        <circle cx="66" cy="28" r="6" fill="url(#luxuryFluid)"/>
+        <circle cx="72" cy="22" r="8" fill="url(#luxuryFluid)"/>
+      </g>
+      <circle cx="72" cy="22" r="14" fill="#4B9AFF" opacity="0.4" style="mix-blend-mode:screen;filter:blur(4px)"/>
+      <circle cx="69.5" cy="19" r="2.6" fill="#ffffff" opacity="0.5" style="mix-blend-mode:screen"/>
+    </g>
+  </g>
+  <text x="520" y="280" fill="rgba(255,255,255,0.95)" font-family="system-ui,sans-serif" font-size="72" font-weight="600">Chrono</text>
+  <text x="520" y="360" fill="rgba(255,255,255,0.6)" font-family="system-ui,sans-serif" font-size="32">Your time, in rhythm.</text>
 </svg>

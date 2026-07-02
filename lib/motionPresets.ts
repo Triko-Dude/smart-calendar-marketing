@@ -1,4 +1,4 @@
-/** Shared Framer Motion spring presets — mirrored from Smart Calendar app. */
+/** Shared Framer Motion spring presets — mirrored from the Chrono app. */
 
 type SpringConfig = {
   stiffness: number;
@@ -49,3 +49,5 @@ export const BUTTON_TAP_SCALE = {
 } as const;
 
 export const SECTION_REVEAL = tuneSpring({ stiffness: 100, damping: 25, mass: 0.9 });
+
+export const TWEEN_WIDGET_MORPH = { type: 'tween' as const, duration: 0.15, ease: 'easeOut' as const };

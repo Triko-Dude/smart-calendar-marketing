@@ -5,9 +5,9 @@ import { SECTION_REVEAL } from '@/lib/motionPresets';
 
 const PARAGRAPHS = [
   'Most calendars were built for meetings. They treat your week as a grid of empty boxes you are expected to fill, then they applaud you when the grid is full. They confuse a scheduled hour with a completed one. They optimize for the appearance of progress, not the doing of the work.',
-  'Smart Calendar is built around a different idea. There is time in your week that belongs to you — protected hours when the only job is to do focused work. We call these focus zones. You organize work in color-coded tabs along the edge. You tell the app what you want to work on. It handles the boring planning: which task goes where, how to spread hours across days, what to do when a deadline is at risk. You handle the part that matters, which is showing up.',
+  'Chrono is built around a different idea. There is time in your week that belongs to you — protected hours when the only job is to do focused work. We call these focus zones. You organize work in color-coded tabs along the edge. You tell the app what you want to work on. It handles the boring planning: which task goes where, how to spread hours across days, what to do when a deadline is at risk. You handle the part that matters, which is showing up.',
   'Everything in the product flows from this posture. The auto-fill places tasks intelligently and gets out of the way. When you drag something, the rest of the calendar reflows in a quiet cascade — not because animation is a feature, but because abrupt jumps are a small disrespect to your attention. Goals fill like water as you complete sessions. Widgets sit in a dock and do their work. Your data stays on your device by default — account sync is there when you want it, not before.',
-  'Smart Calendar is for people who want to do focused work and are willing to protect the time it requires. If that sounds like you, the download is below.',
+  'Chrono is for people who want to do focused work and are willing to protect the time it requires. If that sounds like you, the download is below.',
 ];
 
 const container = {
