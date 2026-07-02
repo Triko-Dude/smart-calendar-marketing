@@ -26,7 +26,9 @@ const WINDOWS_INSTALLER_URL =
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? APP_URL_DEFAULT;
 
 /** Filled after build — update when shipping a new installer. */
-const WINDOWS_INSTALLER_SHA256 = process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ?? '';
+const WINDOWS_INSTALLER_SHA256 =
+  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
+  '5DD6E445767A2133AF097C11F10DEAFD23544CC9FDC23BE7C3DCD7FE1F98CB6E';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
@@ -40,10 +42,10 @@ export const downloadsManifest = {
       status: 'available' as const,
       url: WINDOWS_INSTALLER_URL,
       fileName: 'Chronocal_0.1.0_x64-setup.exe',
-      fileSize: '~38 MB',
+      fileSize: '~35 MB',
       requirements: 'Windows 10 or later · Local-first beta — no account required',
       tagline: 'Install Chronocal on your PC. Your calendar stays on your device.',
-      sha256: WINDOWS_INSTALLER_SHA256 || undefined,
+      sha256: WINDOWS_INSTALLER_SHA256,
       installSteps: [
         'Download the installer (.exe).',
         'Run it and follow the prompts (Windows may show an unsigned-app warning — expected for v0.1).',
