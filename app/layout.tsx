@@ -25,7 +25,11 @@ const jetbrainsMono = JetBrains_Mono({
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
 export const metadata: Metadata = {
-  title: `${PRODUCT_NAME} — ${PRODUCT_TAGLINE}`,
+  title: {
+    default: `${PRODUCT_NAME} — ${PRODUCT_TAGLINE}`,
+    template: `%s — ${PRODUCT_NAME}`,
+  },
+  applicationName: PRODUCT_NAME,
   description: PRODUCT_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
   icons: {
