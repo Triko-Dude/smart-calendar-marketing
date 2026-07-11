@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { DemoFloatingWidgetCard } from '@/components/demo/DemoFloatingWidgetCard';
 import { ProductDemoFrame } from '@/components/demo/ProductDemoFrame';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 import { useWidgetDemoCycle } from '@/hooks/useWidgetDemoCycle';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
@@ -28,8 +29,8 @@ export function WidgetsDemo() {
       id="feature-widgets"
       label="Widgets"
       labelColor="var(--cat-violet)"
-      headline="Information without intrusion."
-      subheadline="A timer that works offline. Weather, email, and social when you connect an account — docked at the edge, expandable when wanted, invisible when not."
+      headline={featureCopy.widgets.headline}
+      subheadline={featureCopy.widgets.subheadline}
     >
       <div ref={containerRef} className="relative">
         <ProductDemoFrame

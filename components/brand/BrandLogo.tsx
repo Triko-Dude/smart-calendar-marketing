@@ -19,7 +19,7 @@ const BRAND_BG = '#0B0D12';
 const VIEW_BOX = '0 0 100 100';
 
 /**
- * Chrono brand mark — gradient "C" with pinch-off droplet and separation glow.
+ * Chronocal brand mark — gradient "C" with pinch-off droplet and separation glow.
  * Inline SVG with unique filter/gradient IDs per instance to avoid DOM collisions.
  */
 export function BrandLogo({

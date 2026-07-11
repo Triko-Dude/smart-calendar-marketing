@@ -15,7 +15,7 @@ import { PRODUCT_NAME } from '@/lib/brand';
 
 export const metadata: Metadata = {
   title: `Download — ${PRODUCT_NAME}`,
-  description: `Download ${PRODUCT_NAME} for Windows or use the web app. More platforms coming soon.`,
+  description: `Download ${PRODUCT_NAME} for Windows. More platforms coming soon.`,
 };
 
 function PlatformCard({
@@ -76,7 +76,9 @@ export default async function DownloadPage() {
   const headersList = await headers();
   const ua = headersList.get('user-agent') ?? '';
   const detected: PlatformId = detectPlatformFromUserAgent(ua);
-  const heroPlatform = getPlatformDownload(detected === 'unknown' ? 'web' : detected);
+  const heroPlatform = getPlatformDownload(
+    detected === 'unknown' || detected === 'web' ? 'windows' : detected,
+  );
   const others = downloadsManifest.platforms.filter((p) => p.id !== heroPlatform?.id);
 
   return (

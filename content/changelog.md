@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — Desktop sync release
+
+- Windows desktop installer with Google Calendar two-way sync
+- Marketing site at chronocal.tech
+
 ## 0.1.0 — Initial release
 
 - Weekly calendar with focus zones and intelligent auto-fill
@@ -10,4 +15,3 @@
 - Local-first storage — no account required for v0.1
 - JSON backup and .ics export
 - Windows desktop installer (Chronocal)
-- Web app at app.chrono.app

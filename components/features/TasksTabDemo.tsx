@@ -16,6 +16,7 @@ import {
   DEMO_TASK_TAB_NUB_W,
 } from '@/lib/taskPanelMetrics';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 import { SPRING_REFLOW } from '@/lib/motionPresets';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
@@ -74,8 +75,8 @@ export function TasksTabDemo() {
       id="feature-tasks"
       label="Tasks"
       labelColor="var(--accent-blue)"
-      headline="Your work, sorted by intention."
-      subheadline="Color-coded tabs along the edge. Hover to see the category. Open the panel, drag a task onto the week. The calendar takes it from there."
+      headline={featureCopy.tasks.headline}
+      subheadline={featureCopy.tasks.subheadline}
     >
       <div ref={containerRef}>
         <ProductDemoFrame

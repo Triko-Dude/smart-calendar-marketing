@@ -1,6 +1,6 @@
-# Chrono — Marketing Site
+# Chronocal — Marketing Site
 
-Marketing and download website for [Chrono](https://github.com/smart-calendar/smart-calendar). Separate from the main app repo.
+Marketing and download website for [Chronocal](https://github.com/Triko-Dude/smart-calendar). Separate from the main app repo.
 
 ## Develop
 
@@ -16,9 +16,10 @@ Open [http://localhost:3002](http://localhost:3002) (or port 3000 if not specifi
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap/OG (default `https://chrono.app`) |
-| `NEXT_PUBLIC_APP_URL` | Web app link on download page (default `https://app.chrono.app`) |
-| `NEXT_PUBLIC_GITHUB_RELEASES_URL` | Windows desktop release URL |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap/OG (default `https://chronocal.tech`) |
+| `NEXT_PUBLIC_APP_URL` | Secondary product link (default download page; hosted web app deferred) |
+| `NEXT_PUBLIC_WINDOWS_INSTALLER_URL` | Windows desktop installer URL (GitHub Releases) |
+| `NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256` | SHA-256 of the Windows installer |
 
 ## Download manifest
 
@@ -26,7 +27,7 @@ Edit `content/downloads.manifest.ts` to update platform URLs and availability wi
 
 ## Deploy
 
-Push to `main` on Vercel for automatic redeploys (~30s).
+Push to `master` on Vercel for automatic redeploys (~30s). Custom domain: `chronocal.tech`.
 
 ## Structure
 

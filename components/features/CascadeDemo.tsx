@@ -9,6 +9,7 @@ import { REFLOW_STAGGER_DELAY, SPRING_REFLOW } from '@/lib/motionPresets';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 
 interface Block {
   id: string;
@@ -61,8 +62,8 @@ export function CascadeDemo() {
       id="feature-cascade"
       label="Cascade"
       labelColor="var(--cat-coral)"
-      headline="A ripple, not a jump."
-      subheadline="When you move a task, every other task makes room with a gentle spring. Nothing jumps. Nothing disappears. The week reshapes itself the way you would, if you had the patience."
+      headline={featureCopy.cascade.headline}
+      subheadline={featureCopy.cascade.subheadline}
     >
       <div ref={containerRef}>
         <ProductDemoFrame>

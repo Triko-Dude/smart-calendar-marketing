@@ -21,6 +21,7 @@ import { SPRING_TASK_PANEL } from '@/lib/motionPresets';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 
 const GOAL_COLOR = '#2fbf71';
 const TARGET_RATIO = 0.6;
@@ -215,8 +216,8 @@ export function GoalsWaterDemo() {
       id="feature-goals"
       label="Goals"
       labelColor="var(--cat-emerald)"
-      headline="Progress, made visible."
-      subheadline="Set a weekly target — read 5 hours, gym 4 times. As you complete sessions, the goal card fills like water. Quiet, ambient, never demanding."
+      headline={featureCopy.goals.headline}
+      subheadline={featureCopy.goals.subheadline}
     >
       <div ref={containerRef}>
         <ProductDemoFrame

@@ -4,6 +4,7 @@ import { ProductDemoFrame } from '@/components/demo/ProductDemoFrame';
 import { dayLeft, dayWidth, slotHeight, slotTop } from '@/components/demo/CalendarGridShell';
 import { DemoEventBlock } from '@/components/demo/DemoEventBlock';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 
 function DeviceFrame({
   label,
@@ -66,8 +67,8 @@ export function EverywhereDemo() {
       id="feature-everywhere"
       label="Everywhere"
       labelColor="var(--accent-blue)"
-      headline="One calendar. Every device."
-      subheadline="Web and Windows today. macOS, Linux, and mobile in development. Your week follows you — starting with the platforms that ship now."
+      headline={featureCopy.everywhere.headline}
+      subheadline={featureCopy.everywhere.subheadline}
     >
       <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-end lg:justify-center">
         <DeviceFrame label="Web" status="Available" className="w-full max-w-md flex-1">

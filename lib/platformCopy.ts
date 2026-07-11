@@ -1,2 +1,2 @@
 export const PLATFORM_STRIP =
-  'Windows and web, today. macOS, Linux, and mobile coming soon.';
+  'Available today on Windows. macOS, Linux, Web, and Mobile coming soon.';

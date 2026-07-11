@@ -10,6 +10,7 @@ import { REFLOW_STAGGER_DELAY, SPRING_REFLOW } from '@/lib/motionPresets';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 
 const TASKS = [
   { id: 't1', title: 'Research', color: 'var(--cat-blue)', top: slotTop(10), h: slotHeight(60) },
@@ -40,8 +41,8 @@ export function FocusZonesDemo() {
       id="feature-focus"
       label="Focus"
       labelColor="var(--cat-blue)"
-      headline="Protected time for the work that matters."
-      subheadline="Mark hours on your calendar as focus zones. Put tasks in. The app handles the rest — scheduling, spreading, protecting boundaries."
+      headline={featureCopy.focus.headline}
+      subheadline={featureCopy.focus.subheadline}
     >
       <div ref={containerRef}>
         <ProductDemoFrame todayIndex={2}>

@@ -7,6 +7,7 @@ import { ProductDemoFrame } from '@/components/demo/ProductDemoFrame';
 import { dayLeft, dayWidth, slotHeight, slotTop } from '@/components/demo/CalendarGridShell';
 import { DemoEventBlock } from '@/components/demo/DemoEventBlock';
 import { FeaturePanel } from '@/components/features/FeaturePanel';
+import { featureCopy } from '@/lib/marketingCopy';
 import { useReducedMotion } from '@/lib/useReducedMotion';
 import { useInViewPause } from '@/lib/useInViewPause';
 import { getEventFill } from '@/lib/eventColors';
@@ -35,8 +36,8 @@ export function SyncDemo() {
       id="feature-sync"
       label="Sync"
       labelColor="var(--accent-blue)"
-      headline="Bring events in. Send them out."
-      subheadline="Import from Google Calendar when you connect an account. Export via .ics for Apple Calendar, or open events in Outlook. Your planner data stays local by default."
+      headline={featureCopy.sync.headline}
+      subheadline={featureCopy.sync.subheadline}
     >
       <div ref={containerRef} className="space-y-6">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center">

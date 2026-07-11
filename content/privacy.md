@@ -1,14 +1,14 @@
 # Privacy Policy
 
-**Last updated:** June 2026
+**Last updated:** July 2026
 
-Chrono respects your privacy. This policy describes what data we collect and how we use it.
+Chronocal respects your privacy. This policy describes what data we collect and how we use it.
 
 ## Data we store
 
 - **Local data:** Tasks, calendar blocks, focus zones, themes, and preferences are stored on your device by default.
-- **Cloud data (Pro):** If you enable cloud sync, your planner data is stored encrypted in our Convex backend, associated with your account.
-- **Connected calendars:** If you connect Google Calendar or Outlook, event data syncs between Chrono and the provider you authorize.
+- **Cloud data:** If you enable cloud sync, your planner data is stored in our Convex backend, associated with your account.
+- **Connected calendars:** If you connect Google Calendar, event data syncs between Chronocal and Google according to the permissions you authorize (read overlays and write-back of scheduled blocks to a dedicated Chronocal calendar).
 
 ## What we do not do
 
@@ -22,4 +22,4 @@ Calendar data is encrypted in transit (TLS) and at rest on our servers.
 
 ## Contact
 
-Questions: hello@chrono.app
+Questions: hello@chronocal.tech
