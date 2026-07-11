@@ -19,10 +19,13 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
 const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.1_x64-setup.exe';
 
-/** Prefer GitHub Releases over hosting binaries in this repo. */
+/**
+ * Host the installer on the marketing site (`public/downloads/`).
+ * GitHub Releases stay private while the app repo is private.
+ */
 const WINDOWS_INSTALLER_URL =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_URL ??
-  `https://github.com/Triko-Dude/smart-calendar/releases/latest/download/${WINDOWS_INSTALLER_FILE}`;
+  `${SITE_URL}/downloads/${WINDOWS_INSTALLER_FILE}`;
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? APP_URL_DEFAULT;
 
