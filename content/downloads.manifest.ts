@@ -17,7 +17,7 @@ export interface PlatformDownload {
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
-const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.1_x64-setup.exe';
+const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.2_x64-setup.exe';
 
 /**
  * Host the installer on the marketing site (`public/downloads/`).
@@ -31,8 +31,7 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? APP_URL_DEFAULT;
 
 /** Filled after build — update when shipping a new installer. */
 const WINDOWS_INSTALLER_SHA256 =
-  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
-  '792464C555078490E2F788896D3DA4BDF093357D1CDADF1EDDA7031ECEEFCDB1';
+  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ?? '';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
