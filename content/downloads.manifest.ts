@@ -28,7 +28,8 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? APP_URL_DEFAULT;
 
 /** Filled after build — update when shipping a new installer. */
 const WINDOWS_INSTALLER_SHA256 =
-  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ?? '';
+  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
+  '792464C555078490E2F788896D3DA4BDF093357D1CDADF1EDDA7031ECEEFCDB1';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
