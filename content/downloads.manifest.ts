@@ -17,7 +17,7 @@ export interface PlatformDownload {
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
-const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.3_x64-setup.exe';
+const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.4_x64-setup.exe';
 
 /**
  * Host the installer on the marketing site (`public/downloads/`).
