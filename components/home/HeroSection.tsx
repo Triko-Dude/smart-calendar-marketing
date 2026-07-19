@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { PRODUCT_HERO_BODY, PRODUCT_TAGLINE } from '@/lib/brand';
+import { APP_URL, PRODUCT_HERO_BODY, PRODUCT_TAGLINE } from '@/lib/brand';
 import { PLATFORM_STRIP } from '@/lib/platformCopy';
 
 const HeroProductLoop = dynamic(
@@ -44,6 +44,11 @@ export function HeroSection() {
                 <Link href="/download">Download</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
+                <a href={APP_URL} rel="noopener noreferrer">
+                  Open web app
+                </a>
+              </Button>
+              <Button variant="ghost" size="lg" asChild>
                 <a href="#feature-tasks">See how it works</a>
               </Button>
             </motion.div>

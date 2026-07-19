@@ -70,15 +70,25 @@ export function EverywhereDemo() {
       headline={featureCopy.everywhere.headline}
       subheadline={featureCopy.everywhere.subheadline}
     >
-      <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-end lg:justify-center">
-        <DeviceFrame label="Web" status="Available" className="w-full max-w-md flex-1">
+      <div className="flex flex-wrap items-end justify-center gap-8">
+        <DeviceFrame label="Windows" status="Available" className="w-56">
+          <div className="w-52">
+            <MiniChrome height={180} />
+          </div>
+        </DeviceFrame>
+        <DeviceFrame label="Web" status="Live now" className="w-full max-w-md">
           <div className="w-80">
             <MiniChrome height={220} />
           </div>
         </DeviceFrame>
-        <DeviceFrame label="Windows" status="Available" className="w-56">
-          <div className="w-52">
-            <MiniChrome height={180} />
+        <DeviceFrame label="macOS" status="Coming soon" className="w-44">
+          <div className="w-40 opacity-70">
+            <MiniChrome height={160} />
+          </div>
+        </DeviceFrame>
+        <DeviceFrame label="Linux" status="Coming soon" className="w-44">
+          <div className="w-40 opacity-70">
+            <MiniChrome height={160} />
           </div>
         </DeviceFrame>
         <DeviceFrame label="Mobile" status="Coming soon" className="w-36">

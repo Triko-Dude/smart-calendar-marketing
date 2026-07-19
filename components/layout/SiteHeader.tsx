@@ -1,22 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { BrandLogo } from '@/components/brand/BrandLogo';
-import { PRODUCT_NAME } from '@/lib/brand';
+import { APP_URL, PRODUCT_NAME } from '@/lib/brand';
 import { useLenisScroll } from '@/components/layout/SmoothScrollProvider';
 
 export function SiteHeader() {
   const { scroll } = useLenisScroll();
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const bgOpacity = mounted ? Math.min(1, Math.max(0, scroll / 80)) : 0;
+  const bgOpacity = Math.min(1, Math.max(0, scroll / 80));
   const borderOpacity = bgOpacity;
 
   return (
@@ -40,9 +34,16 @@ export function SiteHeader() {
           <BrandLogo size={32} />
           {PRODUCT_NAME}
         </Link>
-        <Button variant="outline" size="sm" asChild>
-          <Link href="/download">Download</Link>
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" asChild>
+            <a href={APP_URL} rel="noopener noreferrer">
+              Open web app
+            </a>
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/download">Download</Link>
+          </Button>
+        </div>
       </div>
     </motion.header>
   );

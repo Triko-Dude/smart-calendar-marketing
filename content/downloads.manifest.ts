@@ -1,4 +1,4 @@
-import { APP_URL_DEFAULT, SITE_URL_DEFAULT } from '@/lib/brand';
+import { APP_URL, SITE_URL_DEFAULT } from '@/lib/brand';
 
 export type PlatformStatus = 'available' | 'coming_soon';
 
@@ -27,11 +27,10 @@ const WINDOWS_INSTALLER_URL =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_URL ??
   `${SITE_URL}/downloads/${WINDOWS_INSTALLER_FILE}`;
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? APP_URL_DEFAULT;
-
 /** Filled after build — update when shipping a new installer. */
 const WINDOWS_INSTALLER_SHA256 =
-  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ?? '';
+  process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
+  '47FDE2F209FAB9887DEB8F8D52FC28A99AA05584F9AA58EE2747FBD8FBCDE9EF';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
@@ -46,7 +45,8 @@ export const downloadsManifest = {
       status: 'available' as const,
       url: WINDOWS_INSTALLER_URL,
       fileName: WINDOWS_INSTALLER_FILE,
-      fileSize: '~35 MB',
+      fileSize: '~37 MB',
+
       requirements: 'Windows 10 or later · Local-first beta — no account required',
       tagline: 'Install Chronocal on your PC. Your calendar stays on your device.',
       sha256: WINDOWS_INSTALLER_SHA256 || undefined,
@@ -61,6 +61,7 @@ export const downloadsManifest = {
       id: 'macos',
       label: 'macOS',
       status: 'coming_soon' as const,
+      tagline: 'Use the web app today while the native Mac app is in development.',
       requirements: 'Requires macOS 13 or later',
       installSteps: [
         'Open the .dmg file.',
@@ -78,6 +79,7 @@ export const downloadsManifest = {
       id: 'ios',
       label: 'iOS',
       status: 'coming_soon' as const,
+      tagline: 'Apple users can plan in the web app today while mobile apps are in development.',
     },
     {
       id: 'android',
@@ -87,11 +89,12 @@ export const downloadsManifest = {
     {
       id: 'web',
       label: 'Web App',
-      status: 'coming_soon' as const,
-      tagline: 'Hosted web planner coming later — desktop is the primary experience today.',
+      status: 'available' as const,
+      url: APP_URL,
+      tagline: 'Open Chronocal in your browser at app.chronocal.tech.',
       installSteps: [
-        'Download the Windows desktop app for the full Chronocal experience.',
-        'A hosted web planner may ship later as a secondary surface.',
+        'Open the web app in your browser.',
+        'Start planning from any desktop platform, including macOS.',
       ],
     },
   ] satisfies PlatformDownload[],

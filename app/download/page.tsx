@@ -15,7 +15,7 @@ import { PRODUCT_NAME } from '@/lib/brand';
 
 export const metadata: Metadata = {
   title: `Download — ${PRODUCT_NAME}`,
-  description: `Download ${PRODUCT_NAME} for Windows. More platforms coming soon.`,
+  description: `Download ${PRODUCT_NAME} for Windows or open the web app.`,
 };
 
 function PlatformCard({
@@ -47,10 +47,10 @@ function PlatformCard({
           <Button className="mt-4" asChild>
             <a
               href={platform.url}
-              download={platform.fileName}
+              download={platform.fileName ?? undefined}
               rel="noopener noreferrer"
             >
-              {platform.id === 'web' ? `Open ${platform.label}` : `Download for ${platform.label}`}
+              {platform.id === 'web' ? 'Open web app' : `Download for ${platform.label}`}
             </a>
           </Button>
           {platform.fileSize && (

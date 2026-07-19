@@ -6,10 +6,9 @@ export const storyCopy = {
   eyebrow: 'The Manifesto',
   headline: 'A different posture toward time.',
   paragraphs: [
-    'Traditional calendars were built for meetings. They treat your week as a grid of empty boxes, applauding you when the grid is full. They confuse a scheduled hour with a completed one. They optimize for the appearance of productivity, not the craft of the work itself.',
-    'Chronocal is built on a different premise: There is time in your week that belongs strictly to you. We call these Focus Zones: protected hours where your only job is the work in front of you. You define your intentions in color-coded streams. Chronocal handles the logistics by placing tasks intelligently, spreading hours across days, and adapting when a deadline shifts.',
-    'Everything in the product flows from this posture. When you drag a task, the calendar reflows in a quiet, fluid cascade. Goals fill like rising water. Your data stays on your device by default.',
-    'You handle the part that matters: showing up.',
+    'Traditional calendars were built for meetings. They treat your week as a grid of empty boxes.',
+    'Chronocal is built to make planning simpler and more efficient. Allowing you to feel like planning is enticing rather than monotonous. Everything should flow from this posture. When you drag a task, the calendar reflows in a quiet, fluid cascade. Goals fill like rising water. Your data stays on your device by default.',
+    'The ultimate goal is creating a place where you remember everything your way, and are given every tool out there to make that possible.',
   ],
 } as const;
 
@@ -18,54 +17,61 @@ export const featureCopy = {
     headline: 'Sorted by Intention.',
     subheadline:
       'Organize your workflow into color-coded tabs along the edge. Hover to reveal the category. Drag a task onto your week, and watch the calendar intelligently absorb it.',
+    comingSoon: false,
   },
   focus: {
     headline: 'Fiercely Protected Focus.',
     subheadline:
       'Carve out hours exclusively for the work that matters. Mark your focus zones, drop your tasks in, and Chronocal handles the rest: scheduling, spreading, and protecting your boundaries.',
+    comingSoon: false,
   },
   cascade: {
     headline: 'A Ripple, Not a Jump.',
     subheadline:
       'When plans change, Chronocal adapts seamlessly. Move a task, and the rest of your week parts like water with a gentle, physics-driven spring. No jarring jumps. Just a calendar that fluidly reshapes itself to match your reality.',
+    comingSoon: false,
   },
   goals: {
     headline: 'Ambient Momentum.',
     subheadline:
       'Progress, made beautifully visible. Set a weekly target: read for 5 hours, hit the gym 4 times. As you log sessions, your goal card fills like water. Quiet, satisfying, and never demanding.',
+    comingSoon: false,
   },
   widgets: {
     headline: 'Signal, No Noise.',
     subheadline:
       "Essential tools without the intrusion. An offline timer, weather, and mail sit docked quietly at the edge. Expandable when you need them, entirely invisible when you don't.",
+    comingSoon: false,
   },
   sync: {
     headline: 'Absolute Data Sovereignty.',
     subheadline:
       'Your planner lives on your device. Import your Google Calendar or export via .ics to Apple and Outlook. Account sync is an option when you want it, not a requirement before you start.',
+    comingSoon: false,
   },
   everywhere: {
     headline: 'Your week, everywhere.',
     subheadline:
-      'Windows desktop today. macOS, Linux, web, and mobile in active development. Your rhythm follows you.',
+      'Windows desktop and web app today. macOS, Linux, and mobile are in active development. Apple users can plan in the browser now.',
+    comingSoon: false,
   },
 } as const;
 
 export const honestCopy = {
-  eyebrow: 'Designed with Discipline',
-  headline: 'A few things this is not.',
+  eyebrow: 'The Dreams',
+  headline: 'What we are building toward.',
   cards: [
     {
-      title: 'Not a project management tool.',
-      body: 'No tickets, no boards, no Gantt charts. If you need Jira, you need Jira.',
+      title: 'A fuller planning system.',
+      body: 'We want Chronocal to grow into deeper project planning — without turning into ticket boards and Gantt charts. The dream is structure that still feels like your week, not another work OS.',
     },
     {
-      title: 'Not a team collaboration suite.',
-      body: 'Chronocal is for one person mastering one week. No shared workspaces, no @-mentions, no permissions matrix.',
+      title: 'Shared weeks, still personal.',
+      body: 'One day, collaborating with the people in your life without losing the quiet focus of a personal calendar. Shared moments, not a permissions matrix.',
     },
     {
-      title: 'Not an all-in-one workspace.',
-      body: 'We do one thing perfectly: protect your time and schedule your deep work. Notion and Obsidian are excellent at the rest.',
+      title: 'Everything in one place.',
+      body: 'Notes, tasks, goals, and the week — already coming together. The dream is a home for your whole planning life, so you need fewer apps to feel organized.',
     },
   ],
 } as const;
@@ -73,7 +79,7 @@ export const honestCopy = {
 export const makerCopy = {
   eyebrow: 'From the Maker',
   paragraphs: [
-    'I built Chronocal because every calendar I tried treated my time as inventory to be claimed. None of them respected the actual work: the act of sitting down, getting into something hard, and seeing it through.',
+    'I built Chronocal because every calendar I tried was clunky and felt like a necessity rather than something I wanted to do. None of them respected the actual fun work of taking the bucket of items in your head, giving them a space, and genuinely feeling great when you complete them.',
     "This is the calendar I always wanted. If it ends up being the one you wanted too, I'm grateful.",
   ],
 } as const;
@@ -130,7 +136,7 @@ export const faqCopy = {
     },
     {
       q: 'Can I use it for teams?',
-      a: "Not yet. Chronocal is built for one person's week. Team features are not on the near roadmap.",
+      a: 'Not yet — and that is one of our dreams. Chronocal is built for one person\'s week today. Shared planning is something we want to grow into carefully.',
     },
     {
       q: "What if I don't like it?",
@@ -142,4 +148,5 @@ export const faqCopy = {
 export const finalCtaCopy = {
   headline: 'Ready when you are.',
   ctaLabel: 'Download Chronocal',
+  webCtaLabel: 'Open web app',
 } as const;
