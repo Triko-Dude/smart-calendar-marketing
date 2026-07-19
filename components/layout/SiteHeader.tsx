@@ -36,6 +36,9 @@ export function SiteHeader() {
         </Link>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" asChild>
+            <Link href="/request">Share a request</Link>
+          </Button>
+          <Button variant="ghost" size="sm" asChild>
             <a href={APP_URL} rel="noopener noreferrer">
               Open web app
             </a>

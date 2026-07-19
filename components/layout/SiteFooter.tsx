@@ -13,6 +13,9 @@ export function SiteFooter() {
           <Link href="/download" className="block text-[var(--text-secondary)] hover:text-[var(--foreground)]">
             Download
           </Link>
+          <Link href="/request" className="block text-[var(--text-secondary)] hover:text-[var(--foreground)]">
+            Share a request
+          </Link>
           <Link href="/changelog" className="block text-[var(--text-secondary)] hover:text-[var(--foreground)]">
             Changelog
           </Link>
@@ -24,6 +27,9 @@ export function SiteFooter() {
           </Link>
         </div>
         <div className="space-y-2 text-sm text-[var(--text-secondary)]">
+          <Link href="/request" className="block hover:text-[var(--foreground)]">
+            Tell us what you need
+          </Link>
           <a href={`mailto:${CONTACT_EMAIL}`} className="block hover:text-[var(--foreground)]">
             {CONTACT_EMAIL}
           </a>

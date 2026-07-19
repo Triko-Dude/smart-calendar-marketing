@@ -132,7 +132,7 @@ export const faqCopy = {
     },
     {
       q: 'What if I find a bug?',
-      a: `Email ${CONTACT_EMAIL} or open an issue on the public roadmap. Fixes ship as we can.`,
+      a: `Share it on the request page (chronocal.tech/request) or email ${CONTACT_EMAIL}. We read every note.`,
     },
     {
       q: 'Can I use it for teams?',
