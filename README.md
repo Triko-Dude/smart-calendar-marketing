@@ -17,7 +17,7 @@ Open [http://localhost:3002](http://localhost:3002) (or port 3000 if not specifi
 | Variable | Purpose |
 |----------|---------|
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap/OG (default `https://chronocal.tech`) |
-| `NEXT_PUBLIC_APP_URL` | Hosted web app URL for marketing CTAs (default `https://app.chronocal.tech`) |
+| `NEXT_PUBLIC_APP_URL` | Hosted web planner for **Open web app** / **Sign in** (must not be `chronocal.tech` or `/download`). Until `app` DNS exists, use the Vercel alias; then `https://app.chronocal.tech`. Invalid values fall back to the production alias in `lib/brand.ts`. |
 | `NEXT_PUBLIC_WINDOWS_INSTALLER_URL` | Windows desktop installer URL (GitHub Releases) |
 | `NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256` | SHA-256 of the Windows installer |
 | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Free [Web3Forms](https://web3forms.com) key so `/request` emails land at `hello@chronocal.tech` |
