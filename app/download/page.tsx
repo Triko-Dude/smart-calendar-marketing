@@ -11,7 +11,7 @@ import {
 } from '@/content/downloads.manifest';
 import { detectPlatformFromUserAgent, PLATFORM_LABELS, type PlatformId } from '@/lib/osDetect';
 
-import { PRODUCT_NAME } from '@/lib/brand';
+import { PRODUCT_NAME, APP_URL } from '@/lib/brand';
 
 export const metadata: Metadata = {
   title: `Download — ${PRODUCT_NAME}`,
@@ -89,6 +89,19 @@ export default async function DownloadPage() {
           <p className="text-sm text-[var(--text-secondary)]">
             Detected: {PLATFORM_LABELS[detected === 'unknown' ? 'web' : detected]}
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button asChild>
+              <a href={APP_URL} rel="noopener noreferrer">
+                Sign in
+              </a>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href={APP_URL} rel="noopener noreferrer">
+                Open web app
+              </a>
+            </Button>
+          </div>
 
           {heroPlatform && (
             <div className="mt-8">

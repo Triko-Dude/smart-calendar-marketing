@@ -41,7 +41,9 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Button size="lg" asChild>
-                <Link href="/download">Download</Link>
+                <a href={APP_URL} rel="noopener noreferrer">
+                  Sign in
+                </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <a href={APP_URL} rel="noopener noreferrer">
@@ -49,7 +51,7 @@ export function HeroSection() {
                 </a>
               </Button>
               <Button variant="ghost" size="lg" asChild>
-                <a href="#feature-tasks">See how it works</a>
+                <Link href="/download">Download</Link>
               </Button>
             </motion.div>
             <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">

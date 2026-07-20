@@ -8,10 +8,10 @@ export const PRODUCT_SUBTAGLINE =
   'A calendar created for people who want everything in one place, at one time.';
 
 export const PRODUCT_HERO_BODY =
-  'A calendar created for people who want to easily and efficiently have everything in one place, at one time. Allowing you to create more time your way.';
+  'Plan your week in the browser — tasks, focus zones, and Auto Fill on one calendar. Saved on your device by default; sign-in sync and Google Calendar are optional beta.';
 
 export const PRODUCT_DESCRIPTION =
-  'Chronocal is a calendar for people who want everything in one place: tasks, focus, goals, and your week — planned simply, kept on your device by default.';
+  'Chronocal is a local-first calendar for tasks, focus, goals, and your week. Use it in the browser without an account; export a backup anytime. Cloud sync and Google Calendar are optional.';
 
 export const CONTACT_EMAIL = 'hello@chronocal.tech';
 

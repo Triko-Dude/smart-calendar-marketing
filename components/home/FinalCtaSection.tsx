@@ -13,12 +13,17 @@ export function FinalCtaSection() {
         </h2>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Button size="lg" asChild>
-            <Link href="/download">{finalCtaCopy.ctaLabel}</Link>
+            <a href={APP_URL} rel="noopener noreferrer">
+              {finalCtaCopy.signInLabel}
+            </a>
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a href={APP_URL} rel="noopener noreferrer">
               {finalCtaCopy.webCtaLabel}
             </a>
+          </Button>
+          <Button variant="ghost" size="lg" asChild>
+            <Link href="/download">{finalCtaCopy.ctaLabel}</Link>
           </Button>
         </div>
         <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">

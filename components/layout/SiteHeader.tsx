@@ -40,6 +40,11 @@ export function SiteHeader() {
           </Button>
           <Button variant="ghost" size="sm" asChild>
             <a href={APP_URL} rel="noopener noreferrer">
+              Sign in
+            </a>
+          </Button>
+          <Button variant="ghost" size="sm" asChild>
+            <a href={APP_URL} rel="noopener noreferrer">
               Open web app
             </a>
           </Button>

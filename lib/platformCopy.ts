@@ -1,2 +1,2 @@
 export const PLATFORM_STRIP =
-  'Available today on Windows and web. macOS, Linux, and Mobile coming soon.';
+  'Web planner available today (works without an account). Windows download available. macOS, Linux, and Mobile coming soon.';

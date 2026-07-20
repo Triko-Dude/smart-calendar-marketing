@@ -119,8 +119,12 @@ export const faqCopy = {
       a: "You don't need it. The app works fully without an account. Your data stays in local storage on your device. Backup and restore via JSON is built in.",
     },
     {
+      q: 'Do I need an account?',
+      a: 'No. The web planner works without signing in — your week is saved on this device. Export a backup anytime from Settings → Data. Optional sign-in enables cloud sync (beta).',
+    },
+    {
       q: 'Can I sync with Google Calendar?',
-      a: 'Yes. Connect Google Calendar in Settings to show existing events as overlays and sync scheduled Chronocal blocks to a dedicated Google calendar (two-way).',
+      a: 'Optionally, as a beta. Sign in, then connect Google Calendar in Settings → Integrations to overlay events and sync Chronocal blocks. Not required to use the planner. Public Google access may be invite-only while OAuth is in Testing.',
     },
     {
       q: 'What about Apple Calendar?',
@@ -149,4 +153,5 @@ export const finalCtaCopy = {
   headline: 'Ready when you are.',
   ctaLabel: 'Download Chronocal',
   webCtaLabel: 'Open web app',
+  signInLabel: 'Sign in',
 } as const;

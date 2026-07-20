@@ -91,10 +91,12 @@ export const downloadsManifest = {
       label: 'Web App',
       status: 'available' as const,
       url: APP_URL,
-      tagline: 'Open Chronocal in your browser at app.chronocal.tech.',
+      tagline:
+        'Open Chronocal in your browser — no account required. Sign-in sync is optional beta.',
       installSteps: [
-        'Open the web app in your browser.',
-        'Start planning from any desktop platform, including macOS.',
+        'Open the web app in your browser (works without signing in).',
+        'Plan on this device; export a backup anytime from Settings → Data.',
+        'Optional: Sign in for cloud backup (beta), then connect Google Calendar in Settings if you want overlays.',
       ],
     },
   ] satisfies PlatformDownload[],
