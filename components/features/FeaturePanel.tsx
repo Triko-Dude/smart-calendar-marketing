@@ -13,6 +13,7 @@ interface FeaturePanelProps {
   subheadline: string;
   children: ReactNode;
   pin?: boolean;
+  comingSoon?: boolean;
 }
 
 export function FeaturePanel({
@@ -23,6 +24,7 @@ export function FeaturePanel({
   subheadline,
   children,
   pin = false,
+  comingSoon = false,
 }: FeaturePanelProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const reducedMotion = useReducedMotion();
@@ -72,12 +74,19 @@ export function FeaturePanel({
           viewport={{ once: true, margin: '-60px' }}
           transition={SECTION_REVEAL}
         >
-          <p
-            className="text-[13px] font-semibold uppercase tracking-[0.12em]"
-            style={{ color: labelColor }}
-          >
-            {label}
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p
+              className="text-[13px] font-semibold uppercase tracking-[0.12em]"
+              style={{ color: labelColor }}
+            >
+              {label}
+            </p>
+            {comingSoon && (
+              <span className="rounded-md border border-[var(--border)] bg-[var(--background-elevated)] px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--text-tertiary)]">
+                Coming soon
+              </span>
+            )}
+          </div>
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-[-0.025em] text-[var(--foreground)] md:text-5xl">
             {headline}
           </h2>

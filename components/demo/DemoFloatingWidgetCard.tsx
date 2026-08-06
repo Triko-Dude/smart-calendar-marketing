@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 import { motion } from 'framer-motion';
 import { X } from 'lucide-react';
 import {
@@ -19,6 +19,18 @@ interface DemoFloatingWidgetCardProps {
   onMorphComplete: (phase: DemoMorphPhase) => void;
 }
 
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+
+function subscribeToReducedMotion(onStoreChange: () => void) {
+  const mq = window.matchMedia(REDUCED_MOTION_QUERY);
+  mq.addEventListener('change', onStoreChange);
+  return () => mq.removeEventListener('change', onStoreChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
+}
+
 export function DemoFloatingWidgetCard({
   widgetId,
   morphPhase,
@@ -29,27 +41,15 @@ export function DemoFloatingWidgetCard({
   const widget = getDemoWidget(widgetId);
   const Icon = widget.icon;
   const Panel = widget.Panel;
-  const [reduceMotion, setReduceMotion] = useState(false);
-  const [contentOpacity, setContentOpacity] = useState(0);
+  const reduceMotion = useSyncExternalStore(
+    subscribeToReducedMotion,
+    getReducedMotionSnapshot,
+    () => false,
+  );
 
   const isMorphing = morphPhase === 'opening' || morphPhase === 'docking';
   const isVisible = morphPhase !== 'closed';
-
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReduceMotion(mq.matches);
-    const handler = () => setReduceMotion(mq.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
-
-  useEffect(() => {
-    if (morphPhase === 'opening' || morphPhase === 'docking') {
-      setContentOpacity(0);
-    } else if (morphPhase === 'floating') {
-      setContentOpacity(1);
-    }
-  }, [morphPhase]);
+  const contentOpacity = morphPhase === 'floating' ? 1 : 0;
 
   useEffect(() => {
     if (!reduceMotion) return;
