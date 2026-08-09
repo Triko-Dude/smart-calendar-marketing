@@ -104,7 +104,7 @@ export const faqCopy = {
   items: [
     {
       q: 'Is my data private?',
-      a: 'Yes. By default, your planner data lives on your device. We do not sell, share, or analyze your calendar. If you connect Google Calendar, only the events you authorize are imported. Read the privacy policy for specifics.',
+      a: 'Yes. By default, your planner data lives on your device. We do not sell your data or use it for advertising. If you connect Google Calendar, we use Google user data only for planner overlays and Chronocal calendar sync; disconnect or email hello@chronocal.tech to delete it. Read the privacy policy for retention, deletion, and Google data details.',
     },
     {
       q: 'Windows says the installer is unrecognized. Is it safe?',
