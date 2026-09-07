@@ -1,0 +1,12 @@
+{
+  "version": "0.1.4",
+  "notes": "Chronocal v0.1.4",
+  "pub_date": "2026-07-12T00:38:21.680Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "",
+      "url": "https://chronocal.tech/downloads/Chronocal-Windows-setup.exe",
+      "digest": "x9lz88IoPzk8rGUEvQDnNBdCypS9qk7knhJ9HZeDG6U="
+    }
+  }
+}

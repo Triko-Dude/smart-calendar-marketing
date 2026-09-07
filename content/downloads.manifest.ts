@@ -17,20 +17,21 @@ export interface PlatformDownload {
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL_DEFAULT;
 
-const WINDOWS_INSTALLER_FILE = 'Chronocal_0.1.4_x64-setup.exe';
+/** Stable public filename — Vercel redirects this to the latest marketing GitHub Release. */
+const WINDOWS_INSTALLER_FILE = 'Chronocal-Windows-setup.exe';
 
 /**
- * Host the installer on the marketing site (`public/downloads/`).
- * GitHub Releases stay private while the app repo is private.
+ * Pretty URL on Vercel. The `.exe` is not in git (see `.gitignore`); next.config
+ * redirects `/downloads/*.exe` to the public smart-calendar-marketing GitHub Release.
  */
 const WINDOWS_INSTALLER_URL =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_URL ??
   `${SITE_URL}/downloads/${WINDOWS_INSTALLER_FILE}`;
 
-/** Filled after build — update when shipping a new installer. */
+/** SHA-256 of the v0.1.4 NSIS installer currently published as Chronocal-Windows-setup.exe. */
 const WINDOWS_INSTALLER_SHA256 =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
-  '47FDE2F209FAB9887DEB8F8D52FC28A99AA05584F9AA58EE2747FBD8FBCDE9EF';
+  'C7D973F3C2283F393CAC6504BD00E7341742CA94BDAA4EE49E127D1D97831BA5';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',

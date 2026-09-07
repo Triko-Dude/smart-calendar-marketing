@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 — Public Windows download
+
+- Windows installer is available from [chronocal.tech/download](https://chronocal.tech/download)
+- Direct file: `/downloads/Chronocal-Windows-setup.exe`
+
 ## 0.1.1 — Desktop sync release
 
 - Windows desktop installer with Google Calendar two-way sync
