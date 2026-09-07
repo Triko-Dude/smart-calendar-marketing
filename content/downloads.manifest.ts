@@ -28,10 +28,10 @@ const WINDOWS_INSTALLER_URL =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_URL ??
   `${SITE_URL}/downloads/${WINDOWS_INSTALLER_FILE}`;
 
-/** SHA-256 of the v0.1.4 NSIS installer currently published as Chronocal-Windows-setup.exe. */
+/** SHA-256 of the v0.1.5 NSIS installer published as Chronocal-Windows-setup.exe. */
 const WINDOWS_INSTALLER_SHA256 =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
-  'C7D973F3C2283F393CAC6504BD00E7341742CA94BDAA4EE49E127D1D97831BA5';
+  'CB9112588E4FEA6652BF98AE69B2C24653116B20E1F46951C74C08202EFF772B';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
@@ -46,14 +46,14 @@ export const downloadsManifest = {
       status: 'available' as const,
       url: WINDOWS_INSTALLER_URL,
       fileName: WINDOWS_INSTALLER_FILE,
-      fileSize: '~37 MB',
+      fileSize: '~35 MB',
 
       requirements: 'Windows 10 or later · Local-first beta — no account required',
       tagline: 'Install Chronocal on your PC. Your calendar stays on your device.',
       sha256: WINDOWS_INSTALLER_SHA256 || undefined,
       installSteps: [
         'Download the installer (.exe).',
-        'Run it and follow the prompts (Windows may show an unsigned-app warning — expected for v0.1).',
+        'Run it and follow the prompts (Windows may show an unsigned-app warning — expected for this beta).',
         'Open Chronocal and start with an empty calendar or sample data.',
         'Sign in, then connect Google Calendar for two-way sync.',
       ],

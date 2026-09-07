@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5 — Current desktop build
+
+- Windows installer matches the current Chronocal product (notes, calendar chrome, sync, and updater)
+- Download: [chronocal.tech/download](https://chronocal.tech/download)
+
 ## 0.1.4 — Public Windows download
 
 - Windows installer is available from [chronocal.tech/download](https://chronocal.tech/download)
