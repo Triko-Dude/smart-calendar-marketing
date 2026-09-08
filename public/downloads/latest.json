@@ -1,12 +1,12 @@
 {
-  "version": "0.1.6",
-  "notes": "Chronocal v0.1.6",
-  "pub_date": "2026-09-07T22:36:43.304Z",
-  "platforms": {
-    "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSV0s3T0dkUytJU05RNk9MYU9OU3RlRUFFalhXU1dmL1FMVlVvTm8rdDUyUnByWVR4SGpwdzd5Rzd6ZjdMdGxWOUZ0TE16TFppYVgxZFYvakdCbUhPemZ3NENINjkwcmc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4ODIwNTgyCWZpbGU6Q2hyb25vY2FsXzAuMS42X3g2NC1zZXR1cC5leGUKYzllZFd0dUUyOUsxV0VDb2w0V1k4RWhnYmw0aU1wb1NpL1AzYjhsUVgvYXpybW5rMFlIRzNMTVJHWElBdnhXQmkyckk5eDB3REZGQkhUTm5IdGp1QWc9PQo=",
-      "url": "https://chronocal.tech/downloads/Chronocal_0.1.6_x64-setup.exe",
-      "digest": "P5HMGB3bMn/ew9VOncaMfc4FYrHMyK5q3EavCjwyzRc="
-    }
-  }
+    "version":  "0.1.7",
+    "notes":  "Chronocal v0.1.7",
+    "pub_date":  "2026-09-08T17:30:49.378Z",
+    "platforms":  {
+                      "windows-x86_64":  {
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSV0s3T0dkUytJU05mV0M0c1VIZHdSaVFQTUQyNU9YMWhxTjF6NWY5NGdjeHd2bWFSZ0R1TG1PdHhWL0E1S3BHWWF5YkJuYTFzZjdWMThxRGx4MHpoVkFSN3FOSmtXT2dVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4ODg4NjE1CWZpbGU6Q2hyb25vY2FsXzAuMS43X3g2NC1zZXR1cC5leGUKZ29qeGNlNEZ2UVNRSHFTOCtROEtyT2ZtanEwOVEyOEwxak5rV01xMER3ZkhOdmNmYnBGd2xXak96bUxaekt6VXpDWVozNGdSTGlDYWUrRGFDNVpMRHc9PQo=",
+                                             "url":  "https://chronocal.tech/downloads/Chronocal_0.1.7_x64-setup.exe",
+                                             "digest":  "wzrrkou++G1PtVsH3prXRnTMgB0OOuR0qBqT4AjCc/I="
+                                         }
+                  }
 }
