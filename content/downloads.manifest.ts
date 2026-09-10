@@ -28,10 +28,10 @@ const WINDOWS_INSTALLER_URL =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_URL ??
   `${SITE_URL}/downloads/${WINDOWS_INSTALLER_FILE}`;
 
-/** SHA-256 of the v0.1.7 NSIS installer published as Chronocal-Windows-setup.exe. */
+/** SHA-256 of the v0.1.8 NSIS installer published as Chronocal-Windows-setup.exe. */
 const WINDOWS_INSTALLER_SHA256 =
   process.env.NEXT_PUBLIC_WINDOWS_INSTALLER_SHA256 ??
-  'C33AEB928BBEF86D4FB55B07DE9AD74674CC801D0E3AE474A81A93E008C273F2';
+  'A3352734937A21196F8F8077000E8628DCD44C279B0062F78765D28AB82CA759';
 
 export const downloadsManifest = {
   githubRepo: 'Triko-Dude/smart-calendar',
